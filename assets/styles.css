@@ -1,0 +1,302 @@
+/* Fuente general */
+body {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Hero section */
+  .hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/evento-fondo.jpg') center/cover no-repeat;
+    color: #fff;
+  }
+  
+  /* Botones */
+  .btn-warning {
+    background-color: #f7b733;
+    border: none;
+  }
+  .btn-warning:hover {
+    background-color: #f0a500;
+  }
+  
+  /* Navbar */
+  .navbar-brand span {
+    font-weight: 700;
+    color: #333;
+  }
+  .navbar-light .nav-link {
+    color: #444;
+  }
+  .navbar-light .nav-link:hover {
+    color: #f7b733;
+  }
+  
+  /* Cards */
+  .card-title {
+    font-weight: 600;
+  }
+  .card-body .btn-outline-primary {
+    border-color: #f7b733;
+    color: #f7b733;
+  }
+  .card-body .btn-outline-primary:hover {
+    background-color: #f7b733;
+    color: white;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #111;
+  }
+  footer p, footer a {
+    color: #ccc;
+  }
+  footer a:hover {
+    color: #f7b733;
+  }
+  
+  /* Sección contacto/cotiza */
+  section#cotiza,
+  section#contacto {
+    background-color: #f8f9fa;
+  }
+  
+  /* Formularios */
+  form .form-label {
+    font-weight: 500;
+    color: #333;
+  }
+  
+  /* Responsive ajustes */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+  }
+  
+
+
+/* Animación hover para tarjetas de servicios */
+.product-card.animate-hover {
+    transition: all 0.3s ease-in-out;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 0 transparent;
+  }
+  
+  .product-card.animate-hover:hover {
+    transform: translateY(-5px) scale(1.015);
+    border-color: #0d6efd;
+    box-shadow: 0 0 15px rgba(13, 110, 253, 0.3);
+  }
+  
+  /* Botón azul personalizado */
+  .btn,
+  .btn-primary,
+  .btn-warning,
+  .btn-outline-primary {
+    background-color: #0d6efd !important;
+    border-color: #0d6efd !important;
+    color: #fff !important;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-outline-primary {
+    background-color: transparent !important;
+    color: #0d6efd !important;
+  }
+  
+  .btn:hover,
+  .btn-primary:hover,
+  .btn-warning:hover,
+  .btn-outline-primary:hover {
+    background-color: #084298 !important;
+    border-color: #084298 !important;
+    color: #fff !important;
+  }
+
+
+
+  .product-card.animate-hover {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    background-color: #fff;
+    z-index: 0;
+  }
+  
+  .product-card.animate-hover::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(13,110,253,0.15), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+  }
+  
+  .product-card.animate-hover:hover {
+    transform: scale(1.03);
+    border-color: #0d6efd;
+    box-shadow: 0 10px 30px rgba(13, 110, 253, 0.3);
+  }
+  
+  .product-card.animate-hover:hover::before {
+    opacity: 1;
+    animation: pulseGlow 1.2s infinite ease-in-out;
+  }
+  
+  @keyframes pulseGlow {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.2;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.4;
+    }
+  }
+  
+  /* Botones azules consistentes */
+  .btn-outline-primary,
+  .btn-primary,
+  .btn-warning {
+    background-color: #0d6efd !important;
+    border: 1px solid #0d6efd !important;
+    color: white !important;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .btn-outline-primary:hover,
+  .btn-primary:hover,
+  .btn-warning:hover {
+    background-color: #084298 !important;
+    box-shadow: 0 0 10px rgba(13, 110, 253, 0.5);
+    color: #fff !important;
+  }
+
+
+
+
+.product-card.animate-hover {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+  border: 2px solid transparent;
+  z-index: 0;
+}
+
+.product-card.animate-hover::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  border-radius: 14px;
+  background: linear-gradient(45deg, #0d6efd, transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: -1;
+  box-shadow: 0 0 20px rgba(13, 110, 253, 0.6);
+  animation: glowBorder 2s linear infinite;
+}
+
+.product-card.animate-hover:hover {
+  transform: scale(1.02);
+  border-color: #0d6efd;
+}
+
+.product-card.animate-hover:hover::before {
+  opacity: 1;
+}
+
+@keyframes glowBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo moderno con borde animado tipo “flujo azul” */
+.border-glow {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    transition: transform 0.4s ease;
+    background-color: #fff;
+    z-index: 0;
+  }
+  
+  .border-glow:hover {
+    transform: scale(1.02);
+  }
+  
+  .border-glow::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border-radius: 14px;
+    background: linear-gradient(270deg, #0d6efd, #6ea8fe, #0d6efd);
+    background-size: 600% 600%;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s ease;
+  }
+  
+  .border-glow:hover::before {
+    opacity: 1;
+    animation: borderFlow 3s linear infinite;
+  }
+  
+  @keyframes borderFlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Botón azul con animación de glow */
+  .glow-hover {
+    position: relative;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    z-index: 0;
+  }
+  
+  .glow-hover:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 12px rgba(13, 110, 253, 0.6);
+  }
+  
